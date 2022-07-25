@@ -1,5 +1,5 @@
-const sayHello = world => {
-  return 'Hello, world!';
+function sayHello (string) {
+  return `Hello, ${string}!`;
 };
 
 function uppercase (string) {
