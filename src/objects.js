@@ -19,23 +19,29 @@ const isOver65 = person => {
 };
 
 const getAges = people => {
-  // your code here
+  return people.map(person => person.age);
 };
 
 const findByName = (name, people) => {
-  // your code here
+  return people.find(person => person.name === name);
 };
 
 const findHondas = cars => {
-  // your code here
+  return cars.filter(brand => brand.manufacturer === "Honda");
 };
 
 const averageAge = people => {
-  // your code here
+  return people.reduce((previous, current) => previous + current.age, 0) /people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  return {
+    name: name,
+    age: age,
+    introduce(otherName) {
+      return `Hi ${otherName}, my name is ${this.name} and I am ${this.age}!`
+    }
+  };
 };
 
 module.exports = {
